@@ -18,7 +18,14 @@ jobs:
       # using pre-compiled sdk
     - name: Download PSL1GHT Toolchain
       run: |
-        curl -sL https://github.com/bucanero/ps3toolchain/releases/download/ubuntu-latest-fad3b5fb/ps3dev-ubuntu-latest-2020-08-31.tar.gz | tar xvz -C ./
+
+        OWNER=bucanero
+        REPO=ps3toolchain
+        curl -s https://api.github.com/repos/$OWNER/$REPO/releases/latest \
+        | grep "browser_download_url" \
+        | cut -d '"' -f 4 \
+        | wget -q -i - -O - | tar -xzvf -
+
         echo "PS3DEV=${GITHUB_WORKSPACE}/ps3dev" >> $GITHUB_ENV
         echo "PSL1GHT=${GITHUB_WORKSPACE}/ps3dev" >> $GITHUB_ENV
 
