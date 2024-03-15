@@ -19,7 +19,7 @@ jobs:
     - name: Download PSL1GHT Toolchain
       run: |
 
-        OWNER=bucanero
+        OWNER=humbertodias
         REPO=ps3toolchain
         curl -s https://api.github.com/repos/$OWNER/$REPO/releases/latest \
         | grep "browser_download_url" \
