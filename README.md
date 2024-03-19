@@ -1,3 +1,5 @@
+[![Build package](https://github.com/humbertodias/ps3loadx/actions/workflows/build.yml/badge.svg)](https://github.com/humbertodias/ps3loadx/actions/workflows/build.yml)
+
 # PS3loadX
 
 PS3loadX is the evolution of [PSL1GHT](https://github.com/ps3dev/PSL1GHT/) PS3load sample, now using the [Tiny3D](https://github.com/wargio/tiny3D/) library. I hope this version helps you to work easily ;)
